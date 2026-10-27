@@ -22,7 +22,7 @@ let jsPsych, expInfo={}, blockOrder=[], rankMap={}, blockSequenceOrder={}, block
 let hierarchyRows=[],banditRows=[],tiRows=[],recallRows=[],startedAt=new Date(),screenStep=0,taskFinished=false;
 const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
 const sampleNormal=(mean,sd)=>{if(sd===0)return mean;let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.max(0,Math.min(100,mean+sd*Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)));};
-function stimPath(id){const b=Math.floor(id/7)+1,k=id%7+1;return `images/block${b}/stim${k}.png`;}
+function stimPath(id){const b=Math.floor(id/7)+1,k=id%7+1;return `images/block${b}/stim${k}.jpg`;}
 function stimAlt(id){return `Block ${Math.floor(id/7)+1}, object ${id%7+1}`;}
 function imageHTML(id,style=''){return `<img src="${stimPath(id)}" alt="${stimAlt(id)}" style="${style}" onerror="this.onerror=null;this.outerHTML='<div class=\'error\' style=\'font-size:12px;padding:8px\'>Missing image<br>${stimPath(id)}</div>'">`;}
 function setStatus(s){$('status').textContent=s;}
