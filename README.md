@@ -14,16 +14,16 @@ This repository converts the PsychoPy `TI_bandit_task_v4.py` task into a browser
 
 ## 1. Add the 21 stimulus images
 
-The HTML expects these files (PNG is the default):
+The HTML expects these files (JPG is the default):
 
 ```text
 images/
   block1/
-    stim1.png  stim2.png  stim3.png  stim4.png  stim5.png  stim6.png  stim7.png
+    stim1.jpg  stim2.jpg  stim3.jpg stim4.jpg  stim5.jpg  stim6.jpg  stim7.jpg
   block2/
-    stim1.png  stim2.png  stim3.png  stim4.png  stim5.png  stim6.png  stim7.png
+    stim1.jpg  stim2.jpg  stim3.jpg  stim4.jpg stim5.jpg  stim6.jpg  stim7.jpg
   block3/
-    stim1.png  stim2.png  stim3.png  stim4.png  stim5.png  stim6.png  stim7.png
+    stim1.jpg  stim2.jpg stim3.jpg  stim4.jpg stim5.jpg  stim6.jpg  stim7.jpg
 ```
 
 Use your actual stimulus images, not placeholder pictures. Keep the same image set and naming scheme across participants. If you use JPEG, update `stimPath()` in `index.html` from `.png` to `.jpg` (or add extension fallback logic). Images are served publicly by GitHub Pages, so do not place confidential or copyrighted images there unless you have permission.
